@@ -1,0 +1,15 @@
+Feature: Submit a new application
+  As a user
+  I want to submit a new application
+  So that I can complete the form submission process
+
+  Scenario: Successfully submit a new application
+    Given I go to the URL
+    And I login using the credentials provided
+    When I click "Submit a new application" button
+    And I continue with the submission if prompted
+    And I fill out the forms
+    And I click "Next screen" button
+    Then I verify all the inputted values are displayed in the Summary screen
+    When I click "Validate and send" button
+    Then I verify I am redirected to "Thank you for submitting your project" page

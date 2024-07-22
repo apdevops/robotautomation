@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.2 on win32)" generated="2024-07-20T18:43:14.930866" rpa="false" schemaversion="5">
+<suite id="s1" name="Test Application Submission" source="C:\Users\Aldrich Pieras\PycharmProjects\RobotAutomation\tests\test_application_submission.robot">
+<test id="s1-t1" name="Successfully submit a new application" line="7">
+<kw name="Go to the URL" owner="application_submission">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-07-20T18:43:15.176779" level="INFO">Opening browser 'chrome' to base url 'https://qrqck8u5t9co.front.staging.optimy.net/en/'.</msg>
+<arg>${APPLICATION_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-07-20T18:43:15.176779" elapsed="20.654697"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-07-20T18:43:35.831476" elapsed="0.031320"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${cookie_close_button}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-20T18:43:35.862796" elapsed="0.022514"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-07-20T18:43:35.885310" level="INFO">Clicking button 'css=#cookie-close'.</msg>
+<arg>${cookie_close_button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-20T18:43:35.885310" elapsed="0.058560"/>
+</kw>
+<status status="PASS" start="2024-07-20T18:43:15.176779" elapsed="20.768175"/>
+</kw>
+<kw name="Login using the credentials provided" owner="application_submission">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login_button}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-20T18:43:35.944954" elapsed="0.018551"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-20T18:43:35.963505" level="INFO">Clicking element 'xpath=//a[contains(text(),'Login')]'.</msg>
+<msg time="2024-07-20T18:43:37.324749" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-16.png"&gt;&lt;img src="selenium-screenshot-16.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-07-20T18:43:37.324749" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a class="ml-auto btn btn-outline-primary " href="/en/user/login/"&gt;...&lt;/a&gt; is not clickable at point (1184, 80). Other element would receive the click: &lt;div class="modal fade" id="cookie-modal" data-backdrop="static" data-keyboard="false" data-controller-path="/en/cookies/cookieConsent/controller.php" data-save-on-close="0" data-targeting-initial="" data-statistics-initial="" data-has-cookie="0" data-is-framable="0" tabindex="-1" aria-labelledby="cookies-label" aria-modal="true" role="dialog" style="padding-right: 14px; display: block;" data-preference-initial="0"&gt;...&lt;/div&gt;
+  (Session info: chrome=126.0.6478.128)
+Stacktrace:
+	GetHandleVerifier [0x00007FF71577EEB2+31554]
+	(No symbol) [0x00007FF7156F7EE9]
+	(No symbol) [0x00007FF7155B872A]
+	(No symbol) [0x00007FF71561012E]
+	(No symbol) [0x00007FF71560DAF2]
+	(No symbol) [0x00007FF71560AF8B]
+	(No symbol) [0x00007FF71560A156]
+	(No symbol) [0x00007FF7155FC151]
+	(No symbol) [0x00007FF71562D02A]
+	(No symbol) [0x00007FF7155FBA76]
+	(No symbol) [0x00007FF71562D240]
+	(No symbol) [0x00007FF71564C977]
+	(No symbol) [0x00007FF71562CDD3]
+	(No symbol) [0x00007FF7155FA33B]
+	(No symbol) [0x00007FF7155FAED1]
+	GetHandleVerifier [0x00007FF715A88B2D+3217341]
+	GetHandleVerifier [0x00007FF715AD5AF3+3532675]
+	GetHandleVerifier [0x00007FF715ACB0F0+3489152]
+	GetHandleVerifier [0x00007FF71582E786+750614]
+	(No symbol) [0x00007FF71570376F]
+	(No symbol) [0x00007FF7156FEB24]
+	(No symbol) [0x00007FF7156FECB2]
+	(No symbol) [0x00007FF7156EE17F]
+	BaseThreadInitThunk [0x00007FF96892257D+29]
+	RtlUserThreadStart [0x00007FF9690EAF28+40]
+</msg>
+<arg>${login_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2024-07-20T18:43:35.963505" elapsed="1.365673">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a class="ml-auto btn btn-outline-primary " href="/en/user/login/"&gt;...&lt;/a&gt; is not clickable at point (1184, 80). Other element would receive the click: &lt;div class="modal fade" id="cookie-modal" data-backdrop="static" data-keyboard="false" data-controller-path="/en/cookies/cookieConsent/controller.php" data-save-on-close="0" data-targeting-initial="" data-statistics-initial="" data-has-cookie="0" data-is-framable="0" tabindex="-1" aria-labelledby="cookies-label" aria-modal="true" role="dialog" style="padding-right: 14px; display: block;" data-preference-initial="0"&gt;...&lt;/div&gt;
+  (Session info: chrome=126.0.6478.128)
+Stacktrace:
+	GetHandleVerifier [0x00007FF71577EEB2+31554]
+	(No symbol) [0x00007FF7156F7EE9]
+	(No symbol) [0x00007FF7155B872A]
+	(No symbol) [0x00007FF71561012E]
+	(No symbol) [0x00007FF71560DAF2]
+	(No symbol) [0x00007FF71560AF8B]
+	(No symbol) [0x00007FF71560A156]
+	(No symbol) [0x00007FF7155FC151]
+	(No symbol) [0x00007FF71562D02A]
+	(No symbol) [0x00007FF7155FBA76]
+	(No symbol) [0x00007FF71562D240]
+	(No symbol) [0x00007FF71564C977]
+	(No symbol) [0x00007FF71562CDD3]
+	(No symbol) [0x00007FF7155FA33B]
+	(No symbol) [0x00007FF7155FAED1]
+	GetHandleVerifier [0x00007FF715A88B2D+3217341]
+	GetHandleVerifier [0x00007FF715AD5AF3+3532675]
+	GetHandleVerifier [0x00007FF715ACB0F0+3489152]
+	GetHandleVerifier [0x00007FF71582E786+750614]
+	(No symbol) [0x00007FF71570376F]
+	(No symbol) [0x00007FF7156FEB24]
+	(No symbol) [0x00007FF7156FECB2]
+	(No symbol) [0x00007FF7156EE17F]
+	BaseThreadInitThunk [0x00007FF96892257D+29]
+	RtlUserThreadStart [0x00007FF9690EAF28+40]
+</status>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${login_username_input}</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-07-20T18:43:37.329178" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${login_password_input}</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-07-20T18:43:37.329178" elapsed="0.000000"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>${login_button_confirm}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-07-20T18:43:37.329178" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-07-20T18:43:35.944954" elapsed="1.384224">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a class="ml-auto btn btn-outline-primary " href="/en/user/login/"&gt;...&lt;/a&gt; is not clickable at point (1184, 80). Other element would receive the click: &lt;div class="modal fade" id="cookie-modal" data-backdrop="static" data-keyboard="false" data-controller-path="/en/cookies/cookieConsent/controller.php" data-save-on-close="0" data-targeting-initial="" data-statistics-initial="" data-has-cookie="0" data-is-framable="0" tabindex="-1" aria-labelledby="cookies-label" aria-modal="true" role="dialog" style="padding-right: 14px; display: block;" data-preference-initial="0"&gt;...&lt;/div&gt;
+  (Session info: chrome=126.0.6478.128)
+Stacktrace:
+	GetHandleVerifier [0x00007FF71577EEB2+31554]
+	(No symbol) [0x00007FF7156F7EE9]
+	(No symbol) [0x00007FF7155B872A]
+	(No symbol) [0x00007FF71561012E]
+	(No symbol) [0x00007FF71560DAF2]
+	(No symbol) [0x00007FF71560AF8B]
+	(No symbol) [0x00007FF71560A156]
+	(No symbol) [0x00007FF7155FC151]
+	(No symbol) [0x00007FF71562D02A]
+	(No symbol) [0x00007FF7155FBA76]
+	(No symbol) [0x00007FF71562D240]
+	(No symbol) [0x00007FF71564C977]
+	(No symbol) [0x00007FF71562CDD3]
+	(No symbol) [0x00007FF7155FA33B]
+	(No symbol) [0x00007FF7155FAED1]
+	GetHandleVerifier [0x00007FF715A88B2D+3217341]
+	GetHandleVerifier [0x00007FF715AD5AF3+3532675]
+	GetHandleVerifier [0x00007FF715ACB0F0+3489152]
+	GetHandleVerifier [0x00007FF71582E786+750614]
+	(No symbol) [0x00007FF71570376F]
+	(No symbol) [0x00007FF7156FEB24]
+	(No symbol) [0x00007FF7156FECB2]
+	(No symbol) [0x00007FF7156EE17F]
+	BaseThreadInitThunk [0x00007FF96892257D+29]
+	RtlUserThreadStart [0x00007FF9690EAF28+40]
+</status>
+</kw>
+<kw name="Click Submit a new application button" owner="application_submission">
+<status status="NOT RUN" start="2024-07-20T18:43:37.329178" elapsed="0.000000"/>
+</kw>
+<kw name="Continue with the submission if prompted" owner="application_submission">
+<status status="NOT RUN" start="2024-07-20T18:43:37.329178" elapsed="0.000000"/>
+</kw>
+<kw name="Fill out the forms" owner="application_submission">
+<status status="NOT RUN" start="2024-07-20T18:43:37.329178" elapsed="0.000000"/>
+</kw>
+<kw name="Click Next screen button" owner="application_submission">
+<status status="NOT RUN" start="2024-07-20T18:43:37.329178" elapsed="0.000000"/>
+</kw>
+<kw name="Verify all inputted values are displayed in the Summary screen" owner="application_submission">
+<status status="NOT RUN" start="2024-07-20T18:43:37.329178" elapsed="0.000000"/>
+</kw>
+<kw name="Click Validate and send button" owner="application_submission">
+<status status="NOT RUN" start="2024-07-20T18:43:37.329178" elapsed="0.000000"/>
+</kw>
+<kw name="Verify redirection to &quot;Thank you for submitting your project&quot; page" owner="application_submission">
+<status status="NOT RUN" start="2024-07-20T18:43:37.329178" elapsed="0.004514"/>
+</kw>
+<doc>This test case covers the process of submitting a new application form</doc>
+<status status="FAIL" start="2024-07-20T18:43:15.176268" elapsed="22.157424">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a class="ml-auto btn btn-outline-primary " href="/en/user/login/"&gt;...&lt;/a&gt; is not clickable at point (1184, 80). Other element would receive the click: &lt;div class="modal fade" id="cookie-modal" data-backdrop="static" data-keyboard="false" data-controller-path="/en/cookies/cookieConsent/controller.php" data-save-on-close="0" data-targeting-initial="" data-statistics-initial="" data-has-cookie="0" data-is-framable="0" tabindex="-1" aria-labelledby="cookies-label" aria-modal="true" role="dialog" style="padding-right: 14px; display: block;" data-preference-initial="0"&gt;...&lt;/div&gt;
+  (Session info: chrome=126.0.6478.128)
+Stacktrace:
+	GetHandleVerifier [0x00007FF71577EEB2+31554]
+	(No symbol) [0x00007FF7156F7EE9]
+	(No symbol) [0x00007FF7155B872A]
+	(No symbol) [0x00007FF71561012E]
+	(No symbol) [0x00007FF71560DAF2]
+	(No symbol) [0x00007FF71560AF8B]
+	(No symbol) [0x00007FF71560A156]
+	(No symbol) [0x00007FF7155FC151]
+	(No symbol) [0x00007FF71562D02A]
+	(No symbol) [0x00007FF7155FBA76]
+	(No symbol) [0x00007FF71562D240]
+	(No symbol) [0x00007FF71564C977]
+	(No symbol) [0x00007FF71562CDD3]
+	(No symbol) [0x00007FF7155FA33B]
+	(No symbol) [0x00007FF7155FAED1]
+	GetHandleVerifier [0x00007FF715A88B2D+3217341]
+	GetHandleVerifier [0x00007FF715AD5AF3+3532675]
+	GetHandleVerifier [0x00007FF715ACB0F0+3489152]
+	GetHandleVerifier [0x00007FF71582E786+750614]
+	(No symbol) [0x00007FF71570376F]
+	(No symbol) [0x00007FF7156FEB24]
+	(No symbol) [0x00007FF7156FECB2]
+	(No symbol) [0x00007FF7156EE17F]
+	BaseThreadInitThunk [0x00007FF96892257D+29]
+	RtlUserThreadStart [0x00007FF9690EAF28+40]
+</status>
+</test>
+<status status="FAIL" start="2024-07-20T18:43:14.931999" elapsed="22.402723"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Test Application Submission">Test Application Submission</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

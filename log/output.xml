@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.2 on win32)" generated="2024-07-20T15:36:04.180134" rpa="false" schemaversion="5">
+<suite id="s1" name="Test Application Submission" source="C:\Users\Aldrich Pieras\PycharmProjects\RobotAutomation\tests\test_application_submission.robot">
+<test id="s1-t1" name="Successfully submit a new application" line="7">
+<kw name="Go to the URL" owner="application_submission">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-07-20T15:36:04.427992" level="INFO">Opening browser 'chrome' to base url 'https://qrqck8u5t9co.front.staging.optimy.net/en/'.</msg>
+<arg>${APPLICATION_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-07-20T15:36:04.427992" elapsed="6.196062"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-07-20T15:36:10.625127" elapsed="0.026198"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css=#cookie-close</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-20T15:36:10.652324" elapsed="0.030286"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-07-20T15:36:10.683621" level="INFO">Clicking button 'css=#cookie-close'.</msg>
+<arg>css=#cookie-close</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-20T15:36:10.682610" elapsed="0.066202"/>
+</kw>
+<status status="PASS" start="2024-07-20T15:36:04.427992" elapsed="6.320820"/>
+</kw>
+<kw name="Login using the credentials provided" owner="application_submission">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//a[contains(text(),'Login')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-20T15:36:10.750419" elapsed="0.019160"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-20T15:36:10.771364" level="INFO">Clicking element '//a[contains(text(),'Login')]'.</msg>
+<arg>//a[contains(text(),'Login')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-20T15:36:10.769579" elapsed="5.791130"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-20T15:36:16.562075" level="INFO">Typing text 'optimyautomationtester@gmail.com' into text field 'css=#login-email'.</msg>
+<arg>css=#login-email</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-20T15:36:16.560709" elapsed="0.186915"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-20T15:36:16.747624" level="INFO">Typing text '2MsWseoj' into text field 'css=#login-password'.</msg>
+<arg>css=#login-password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-20T15:36:16.747624" elapsed="0.102886"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-07-20T15:36:16.851509" level="INFO">Clicking button 'css=button.btn-lg:nth-child(2)'.</msg>
+<arg>css=button.btn-lg:nth-child(2)</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-20T15:36:16.850510" elapsed="2.117680"/>
+</kw>
+<status status="PASS" start="2024-07-20T15:36:10.749910" elapsed="8.218280"/>
+</kw>
+<kw name="Click Submit a new application button" owner="application_submission">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//a[contains(text(),'Submit a new application')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-20T15:36:18.969201" elapsed="0.022376"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-20T15:36:18.991577" level="INFO">Clicking element '//a[contains(text(),'Submit a new application')]'.</msg>
+<arg>//a[contains(text(),'Submit a new application')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-20T15:36:18.991577" elapsed="3.872980"/>
+</kw>
+<status status="PASS" start="2024-07-20T15:36:18.968190" elapsed="3.896367"/>
+</kw>
+<kw name="Continue with the submission if prompted" owner="application_submission">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-07-20T15:36:22.890987" level="INFO">Element '//a[contains(text(),'Continue with the submission of the application')]' is displayed.</msg>
+<arg>//a[contains(text(),'Continue with the submission of the application')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-20T15:36:22.865797" elapsed="0.025190"/>
+</kw>
+<arg>Element Should Be Visible</arg>
+<arg>//a[contains(text(),'Continue with the submission of the application')]</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-07-20T15:36:22.865797" elapsed="0.025190"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-20T15:36:22.890987" level="INFO">Clicking element '//a[contains(text(),'Continue with the submission of the application')]'.</msg>
+<arg>//a[contains(text(),'Continue with the submission of the application')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-20T15:36:22.890987" elapsed="3.103626"/>
+</kw>
+<status status="PASS" start="2024-07-20T15:36:22.865797" elapsed="3.128816"/>
+</kw>
+<kw name="Fill out the forms" owner="application_submission">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-20T15:36:25.995132" level="INFO">Typing text 'Jose' into text field 'xpath=//input[@aria-label='First name']'.</msg>
+<arg>xpath=//input[@aria-label='First name']</arg>
+<arg>Jose</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-20T15:36:25.995132" elapsed="0.103681"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-20T15:36:26.101016" level="INFO">Typing text 'Rizal' into text field 'xpath=//input[@aria-label='Last name']'.</msg>
+<arg>xpath=//input[@aria-label='Last name']</arg>
+<arg>Rizal</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-20T15:36:26.101016" elapsed="0.093080"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-20T15:36:26.194604" level="INFO">Typing text 'Test_address' into text field 'xpath=//textarea[@aria-label='Unit no/House no, Street']'.</msg>
+<arg>xpath=//textarea[@aria-label='Unit no/House no, Street']</arg>
+<arg>Test_address</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-20T15:36:26.194604" elapsed="0.103625"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-20T15:36:26.298735" level="INFO">Typing text '2024' into text field 'xpath=//input[@aria-label='Select postal code']'.</msg>
+<arg>xpath=//input[@aria-label='Select postal code']</arg>
+<arg>2024</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-20T15:36:26.298735" elapsed="0.087492"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2024-07-20T15:36:26.386227" level="INFO">Selecting options from selection list 'xpath=//select[@aria-label='Country']' by value AU.</msg>
+<arg>xpath=//select[@aria-label='Country']</arg>
+<arg>AU</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2024-07-20T15:36:26.386227" elapsed="0.072185"/>
+</kw>
+<kw name="Choose File" owner="SeleniumLibrary">
+<msg time="2024-07-20T15:36:26.458412" level="INFO">Sending C:\Users\Aldrich Pieras\PycharmProjects\RobotAutomation\resources\test_image.png to browser.</msg>
+<arg>//input[@name='Filedata']</arg>
+<arg>C:\\Users\\Aldrich Pieras\\PycharmProjects\\RobotAutomation\\resources/test_image.png</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<status status="PASS" start="2024-07-20T15:36:26.458412" elapsed="0.046972"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-20T15:36:31.509810" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-20T15:36:26.505384" elapsed="5.005482"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-20T15:36:31.512848" level="INFO">Clicking element '//strong[contains(text(),'Gender')]/../../div/ul/li[1]/label[1]/div/input'.</msg>
+<msg time="2024-07-20T15:36:32.755225" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-07-20T15:36:32.755225" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;input id="254f1489-f589-50c5-a1cc-698f61546ccc" type="radio" class="custom-control-input radio" name="64d3c1af-c688-597d-9803-77e4287f2fbb" value="254f1489-f589-50c5-a1cc-698f61546ccc" data-reusable-value="" data-fv-field="64d3c1af-c688-597d-9803-77e4287f2fbb"&gt; is not clickable at point (440, 525). Other element would receive the click: &lt;div class="custom-control-label radio-checkbox-li-element-label"&gt;...&lt;/div&gt;
+  (Session info: chrome=126.0.6478.128)
+Stacktrace:
+	GetHandleVerifier [0x00007FF71577EEB2+31554]
+	(No symbol) [0x00007FF7156F7EE9]
+	(No symbol) [0x00007FF7155B872A]
+	(No symbol) [0x00007FF71561012E]
+	(No symbol) [0x00007FF71560DAF2]
+	(No symbol) [0x00007FF71560AF8B]
+	(No symbol) [0x00007FF71560A156]
+	(No symbol) [0x00007FF7155FC151]
+	(No symbol) [0x00007FF71562D02A]
+	(No symbol) [0x00007FF7155FBA76]
+	(No symbol) [0x00007FF71562D240]
+	(No symbol) [0x00007FF71564C977]
+	(No symbol) [0x00007FF71562CDD3]
+	(No symbol) [0x00007FF7155FA33B]
+	(No symbol) [0x00007FF7155FAED1]
+	GetHandleVerifier [0x00007FF715A88B2D+3217341]
+	GetHandleVerifier [0x00007FF715AD5AF3+3532675]
+	GetHandleVerifier [0x00007FF715ACB0F0+3489152]
+	GetHandleVerifier [0x00007FF71582E786+750614]
+	(No symbol) [0x00007FF71570376F]
+	(No symbol) [0x00007FF7156FEB24]
+	(No symbol) [0x00007FF7156FECB2]
+	(No symbol) [0x00007FF7156EE17F]
+	BaseThreadInitThunk [0x00007FF96892257D+29]
+	RtlUserThreadStart [0x00007FF9690EAF28+40]
+</msg>
+<arg>//strong[contains(text(),'Gender')]/../../div/ul/li[1]/label[1]/div/input</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2024-07-20T15:36:31.511865" elapsed="1.247606">ElementClickInterceptedException: Message: element click intercepted: Element &lt;input id="254f1489-f589-50c5-a1cc-698f61546ccc" type="radio" class="custom-control-input radio" name="64d3c1af-c688-597d-9803-77e4287f2fbb" value="254f1489-f589-50c5-a1cc-698f61546ccc" data-reusable-value="" data-fv-field="64d3c1af-c688-597d-9803-77e4287f2fbb"&gt; is not clickable at point (440, 525). Other element would receive the click: &lt;div class="custom-control-label radio-checkbox-li-element-label"&gt;...&lt;/div&gt;
+  (Session info: chrome=126.0.6478.128)
+Stacktrace:
+	GetHandleVerifier [0x00007FF71577EEB2+31554]
+	(No symbol) [0x00007FF7156F7EE9]
+	(No symbol) [0x00007FF7155B872A]
+	(No symbol) [0x00007FF71561012E]
+	(No symbol) [0x00007FF71560DAF2]
+	(No symbol) [0x00007FF71560AF8B]
+	(No symbol) [0x00007FF71560A156]
+	(No symbol) [0x00007FF7155FC151]
+	(No symbol) [0x00007FF71562D02A]
+	(No symbol) [0x00007FF7155FBA76]
+	(No symbol) [0x00007FF71562D240]
+	(No symbol) [0x00007FF71564C977]
+	(No symbol) [0x00007FF71562CDD3]
+	(No symbol) [0x00007FF7155FA33B]
+	(No symbol) [0x00007FF7155FAED1]
+	GetHandleVerifier [0x00007FF715A88B2D+3217341]
+	GetHandleVerifier [0x00007FF715AD5AF3+3532675]
+	GetHandleVerifier [0x00007FF715ACB0F0+3489152]
+	GetHandleVerifier [0x00007FF71582E786+750614]
+	(No symbol) [0x00007FF71570376F]
+	(No symbol) [0x00007FF7156FEB24]
+	(No symbol) [0x00007FF7156FECB2]
+	(No symbol) [0x00007FF7156EE17F]
+	BaseThreadInitThunk [0x00007FF96892257D+29]
+	RtlUserThreadStart [0x00007FF9690EAF28+40]
+</status>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<arg>xpath=//select[@aria-label='Select a role you're applying for']</arg>
+<arg>Automation tester</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="NOT RUN" start="2024-07-20T15:36:32.759471" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>//div[contains(text(),'Spreadsheet')]/../input</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-07-20T15:36:32.759471" elapsed="0.000000"/>
+</kw>
+<kw name="Select Frame" owner="SeleniumLibrary">
+<arg>//strong[contains(text(), 'What is your career objective?')]/../../div/div/div/div/div/iframe</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<status status="NOT RUN" start="2024-07-20T15:36:32.759471" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-07-20T15:36:25.995132" elapsed="6.764339">ElementClickInterceptedException: Message: element click intercepted: Element &lt;input id="254f1489-f589-50c5-a1cc-698f61546ccc" type="radio" class="custom-control-input radio" name="64d3c1af-c688-597d-9803-77e4287f2fbb" value="254f1489-f589-50c5-a1cc-698f61546ccc" data-reusable-value="" data-fv-field="64d3c1af-c688-597d-9803-77e4287f2fbb"&gt; is not clickable at point (440, 525). Other element would receive the click: &lt;div class="custom-control-label radio-checkbox-li-element-label"&gt;...&lt;/div&gt;
+  (Session info: chrome=126.0.6478.128)
+Stacktrace:
+	GetHandleVerifier [0x00007FF71577EEB2+31554]
+	(No symbol) [0x00007FF7156F7EE9]
+	(No symbol) [0x00007FF7155B872A]
+	(No symbol) [0x00007FF71561012E]
+	(No symbol) [0x00007FF71560DAF2]
+	(No symbol) [0x00007FF71560AF8B]
+	(No symbol) [0x00007FF71560A156]
+	(No symbol) [0x00007FF7155FC151]
+	(No symbol) [0x00007FF71562D02A]
+	(No symbol) [0x00007FF7155FBA76]
+	(No symbol) [0x00007FF71562D240]
+	(No symbol) [0x00007FF71564C977]
+	(No symbol) [0x00007FF71562CDD3]
+	(No symbol) [0x00007FF7155FA33B]
+	(No symbol) [0x00007FF7155FAED1]
+	GetHandleVerifier [0x00007FF715A88B2D+3217341]
+	GetHandleVerifier [0x00007FF715AD5AF3+3532675]
+	GetHandleVerifier [0x00007FF715ACB0F0+3489152]
+	GetHandleVerifier [0x00007FF71582E786+750614]
+	(No symbol) [0x00007FF71570376F]
+	(No symbol) [0x00007FF7156FEB24]
+	(No symbol) [0x00007FF7156FECB2]
+	(No symbol) [0x00007FF7156EE17F]
+	BaseThreadInitThunk [0x00007FF96892257D+29]
+	RtlUserThreadStart [0x00007FF9690EAF28+40]
+</status>
+</kw>
+<kw name="Click Next screen button" owner="application_submission">
+<status status="NOT RUN" start="2024-07-20T15:36:32.759471" elapsed="0.000000"/>
+</kw>
+<kw name="Verify all inputted values are displayed in the Summary screen" owner="application_submission">
+<status status="NOT RUN" start="2024-07-20T15:36:32.759471" elapsed="0.000000"/>
+</kw>
+<kw name="Click Validate and send button" owner="application_submission">
+<status status="NOT RUN" start="2024-07-20T15:36:32.759471" elapsed="0.000000"/>
+</kw>
+<kw name="Verify redirection to &quot;Thank you for submitting your project&quot; page" owner="application_submission">
+<status status="NOT RUN" start="2024-07-20T15:36:32.759471" elapsed="0.000000"/>
+</kw>
+<doc>This test case covers the process of submitting a new application form</doc>
+<status status="FAIL" start="2024-07-20T15:36:04.427992" elapsed="28.335492">ElementClickInterceptedException: Message: element click intercepted: Element &lt;input id="254f1489-f589-50c5-a1cc-698f61546ccc" type="radio" class="custom-control-input radio" name="64d3c1af-c688-597d-9803-77e4287f2fbb" value="254f1489-f589-50c5-a1cc-698f61546ccc" data-reusable-value="" data-fv-field="64d3c1af-c688-597d-9803-77e4287f2fbb"&gt; is not clickable at point (440, 525). Other element would receive the click: &lt;div class="custom-control-label radio-checkbox-li-element-label"&gt;...&lt;/div&gt;
+  (Session info: chrome=126.0.6478.128)
+Stacktrace:
+	GetHandleVerifier [0x00007FF71577EEB2+31554]
+	(No symbol) [0x00007FF7156F7EE9]
+	(No symbol) [0x00007FF7155B872A]
+	(No symbol) [0x00007FF71561012E]
+	(No symbol) [0x00007FF71560DAF2]
+	(No symbol) [0x00007FF71560AF8B]
+	(No symbol) [0x00007FF71560A156]
+	(No symbol) [0x00007FF7155FC151]
+	(No symbol) [0x00007FF71562D02A]
+	(No symbol) [0x00007FF7155FBA76]
+	(No symbol) [0x00007FF71562D240]
+	(No symbol) [0x00007FF71564C977]
+	(No symbol) [0x00007FF71562CDD3]
+	(No symbol) [0x00007FF7155FA33B]
+	(No symbol) [0x00007FF7155FAED1]
+	GetHandleVerifier [0x00007FF715A88B2D+3217341]
+	GetHandleVerifier [0x00007FF715AD5AF3+3532675]
+	GetHandleVerifier [0x00007FF715ACB0F0+3489152]
+	GetHandleVerifier [0x00007FF71582E786+750614]
+	(No symbol) [0x00007FF71570376F]
+	(No symbol) [0x00007FF7156FEB24]
+	(No symbol) [0x00007FF7156FECB2]
+	(No symbol) [0x00007FF7156EE17F]
+	BaseThreadInitThunk [0x00007FF96892257D+29]
+	RtlUserThreadStart [0x00007FF9690EAF28+40]
+</status>
+</test>
+<status status="FAIL" start="2024-07-20T15:36:04.182599" elapsed="28.580885"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Test Application Submission">Test Application Submission</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
